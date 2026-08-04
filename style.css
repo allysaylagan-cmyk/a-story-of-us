@@ -555,4 +555,56 @@ button:hover{
 
     }
 
+}/* ===========================
+   MOBILE MEMORY CARDS
+=========================== */
+
+@media(max-width:768px){
+
+    .memory-grid{
+
+        grid-template-columns:1fr;
+
+        width:100%;
+
+        gap:20px;
+
+    }
+
+
+    .memory-card{
+
+        width:100%;
+
+        max-width:320px;
+
+        height:150px;
+
+        margin:auto;
+
+    }
+
+
+    .episode-page{
+
+        padding:50px 20px;
+
+    }
+
+
+    .episode-page h2{
+
+        font-size:32px;
+
+    }
+
+
+    .episode-intro{
+
+        font-size:16px;
+
+        padding:0 10px;
+
+    }
+
 }
