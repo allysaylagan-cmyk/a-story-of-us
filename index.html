@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>A Story Of Us ❤️</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+
+
+<!-- OPENING SCREEN -->
+
+<div class="intro">
+
+    <div class="studio">
+        A LOVE STORY
+        <br>
+        PRESENTS
+    </div>
+
+
+    <h1>
+        TO MY FAVORITE PERSON ❤️
+    </h1>
+
+
+    <p>
+        A story about two people,<br>
+        one message,<br>
+        and a love that grew.
+    </p>
+
+
+    <span>
+        August 23, 2026
+    </span>
+
+
+    <button onclick="beginStory()">
+        ▶ Begin Our Story
+    </button>
+
+
+</div>
+
+
+
+<!-- EPISODE SELECTION SCREEN -->
+
+<div class="episodes hidden">
+
+
+    <h2>
+        OUR STORY
+    </h2>
+
+
+<div class="episode-container">
+
+
+<div class="episode-card"
+onclick="openEpisode(1)"
+style="background-image:url('assets/photos/Episode-1.jpg')">
+    <div class="card-overlay">
+        <h3>Episode 1</h3>
+        <p>The First Hello</p>
+    </div>
+</div>
+
+<div class="episode-card"
+onclick="openEpisode(2)"
+style="background-image:url('assets/photos/Episode-2.jpg')">
+    <div class="card-overlay">
+        <h3>Episode 2</h3>
+        <p>When You Chose Me</p>
+    </div>
+</div>
+
+
+<div class="episode-card"
+onclick="openEpisode(3)"
+style="background-image:url('assets/photos/Episode-3.jpg')">
+    <div class="card-overlay">
+        <h3>Episode 3</h3>
+        <p>When Online Became Real</p>
+    </div>
+</div>
+
+
+<div class="episode-card"
+onclick="openEpisode(4)"
+style="background-image:url('assets/photos/Episode-4.jpg')">
+    <div class="card-overlay">
+        <h3>Episode 4</h3>
+        <p>Loving My World</p>
+    </div>
+</div>
+
+
+<div class="episode-card"
+onclick="openEpisode(5)"
+style="background-image:url('assets/photos/Episode-5.jpg')">
+    <div class="card-overlay">
+        <h3>Episode 5</h3>
+        <p>Choosing Us</p>
+    </div>
+</div>
+
+
+<div class="episode-card"
+onclick="openEpisode(6)"
+style="background-image:url('assets/photos/Episode-6.jpg')">
+    <div class="card-overlay">
+        <h3>Episode 6</h3>
+        <p>Forever Starts Here</p>
+    </div>
+</div>
+
+
+</div>
+
+</div> <!-- episode-container -->
+
+</div> <!-- episodes -->
+
+<!-- ==========================
+     EPISODE 1
+========================== -->
+
+<div id="episode1" class="episode-page hidden">
+
+    <button class="back-btn" onclick="backToEpisodes()">
+        ← Back
+    </button>
+
+    <h2>The First Wave</h2>
+
+    <p class="episode-intro">
+        Every love story begins somewhere.
+        <br><br>
+        Ours started with one simple wave...
+    </p>
+
+    <div class="memory-grid">
+
+        <div class="memory-card"
+
+onclick="openMemory(
+
+'The First Hello',
+
+'assets/screenshots/hi-message.jpg',
+
+`The very first message
+that started everything.
+
+Tagalugin ko na ha, Ito yung unang chat mo sakin.
+Akala ko scammer, magnanakaw pala, ng puso, hays.
+August 23, 2025 na akala ko napaka simpleng araw,
+magcchat na pala ang aking pang habang-buhay.
+Buti nagchat ka no, nangsstalk lang ako sayo before e,
+sabi ko, aba ampogi neto. Approved!.
+
+❤️`
+
+)">
+
+💬 First Message
+
+</div>
+
+        <div class="memory-card"
+onclick="openMemory(
+
+'First Conversation',
+
+'assets/screenshots/first-convo.jpg',
+
+`Akala ko hindi magtutuloy tuloy, e mga sabik din
+magkaroon ng bebe. Buti nalang single tayo pareho. 
+Paano kaya kung kayo pa ng ex mo, hmmmm. 
+Anyways, kakamiss lang. Gusto ulit kita kilalanin
+sana pero on a different level na hahahaha
+
+❤️`
+
+)">
+    
+📱 First Conversation
+
+</div>
+
+        <div class="memory-card"
+onclick="openMemory(
+
+'The Little Things',
+
+'assets/screenshots/updates.jpg',
+
+`Actually hindi naman to little thing e. 
+Alam mo kung gaano ako napapasaya ng long 
+sweet messages mo and sa totoo lang namimiss ko
+yan ha. Pero, mas better naman na yung
+pinupuntahan mo ko kapag di kita 
+kinakausap, mwehehee. 
+
+❤️`
+
+)">
+    
+🌱 The Little Things 
+
+</div>
+
+        <div class="memory-card"
+onclick="openMemory(
+
+'Late Night Talks',
+
+'assets/photos/ldr.jpg',
+
+`Syempre super, ultra mega late night
+talks kahit we are both busy, may time pa din.
+Kahit wala pa me here sa bahay at nandoon 
+pa kina kuya, nagagawan ng paraan. At mas 
+lalong kahit hindi pa legal ay nakaka
+pag usap pa din. Ganun talaga, mahal e.
+
+❤️`
+
+)">
+    
+🌙 Late Night Talks 
+
+</div>
+
+      <div class="memory-card"
+onclick="openMemory(
+
+'Favorite Chat',
+
+'assets/screenshots/car.jpg',
+
+`eto talaga favorite ko e hahahaha. 
+Nakatatak na yan, pero syempre pag iipunan
+natin yan, magtatapos lang ng utang. Basta
+ang wish ko lang is matupad mo mga pangarap mo,
+here lang me for you, mwwaaaa.
+
+❤️`
+
+)">
+    
+❤️ Favorite Chat 
+
+</div>
+
+        <div class="memory-card"
+onclick="openMemory(
+
+'First Feelings',
+
+'assets/screenshots/iloveyou.jpg',
+
+`Hindi ito yung first iloveyou natin sa
+isa't isa, pero ang alam ko ako nauna e.
+Anyways, wala ka namang pruweba so ikaw 
+nauna magtapat ng feelings kasi lalaki ka,
+iloveyou pa din.  
+
+❤️`
+
+)">
+    
+💌 First Feelings
+
+</div>
+
+    </div>
+
+</div>
+
+<div id="episode2" class="episode-page hidden">
+
+    <button class="back-btn" onclick="backToEpisodes()">← Back</button>
+
+    <h2>When You Chose Me</h2>
+
+    <p class="episode-intro">
+        The day you chose to stay,
+        my heart quietly started choosing you too.
+    </p>
+
+    <div class="memory-grid">
+
+        <div class="memory-card">💌 Courting Message</div>
+        <div class="memory-card">📞 First Call</div>
+        <div class="memory-card">🌙 Late Night Call</div>
+        <div class="memory-card">💍 Paper Ring</div>
+        <div class="memory-card">❤️ Care Messages</div>
+        <div class="memory-card">📱 Daily Updates</div>
+
+    </div>
+
+</div>
+
+<div id="episode3" class="episode-page hidden">
+
+    <button class="back-btn" onclick="backToEpisodes()">← Back</button>
+
+    <h2>When Online Became Real</h2>
+
+    <p class="episode-intro">
+        Distance disappeared the moment I finally saw you.
+    </p>
+
+    <div class="memory-grid">
+
+        <div class="memory-card">📍 First Meet</div>
+        <div class="memory-card">💐 Flowers</div>
+        <div class="memory-card">🤝 Holding Hands</div>
+        <div class="memory-card">📷 First Picture Together</div>
+        <div class="memory-card">💋 First Kiss</div>
+        <div class="memory-card">❤️ Favorite Moment</div>
+
+    </div>
+
+</div>
+
+<div id="episode4" class="episode-page hidden">
+
+    <button class="back-btn" onclick="backToEpisodes()">← Back</button>
+
+    <h2>Loving My World</h2>
+
+    <p class="episode-intro">
+        Loving me also meant loving the people who mean the most to me.
+    </p>
+
+    <div class="memory-grid">
+
+        <div class="memory-card">👨 Dad</div>
+        <div class="memory-card">👨 Caleb & Dad</div>
+        <div class="memory-card">📷 Family Moment</div>
+        <div class="memory-card">❤️ Caleb & Family</div>
+        <div class="memory-card">🏡 Home Memories</div>
+        <div class="memory-card">😊 Together</div>
+
+    </div>
+
+</div>
+
+<div id="episode5" class="episode-page hidden">
+
+    <button class="back-btn" onclick="backToEpisodes()">← Back</button>
+
+    <h2>Choosing Us</h2>
+
+    <p class="episode-intro">
+        Love isn't about never hurting each other.
+        It's about always finding our way back.
+    </p>
+
+    <div class="memory-grid">
+
+        <div class="memory-card">💔 Argument</div>
+        <div class="memory-card">🥹 Sorry</div>
+        <div class="memory-card">📱 Long Distance</div>
+        <div class="memory-card">🌧 Hard Days</div>
+        <div class="memory-card">🤍 Forgiveness</div>
+        <div class="memory-card">😊 Happy Again</div>
+
+    </div>
+
+</div>
+
+<div id="episode6" class="episode-page hidden">
+
+    <button class="back-btn" onclick="backToEpisodes()">← Back</button>
+
+    <h2>Forever Starts Here</h2>
+
+    <p class="episode-intro">
+        Every memory led us here.
+        Every chapter brought us closer to forever.
+    </p>
+
+    <div class="memory-grid">
+
+        <div class="memory-card">💍 Promise Ring</div>
+        <div class="memory-card">❤️ Our Future</div>
+        <div class="memory-card">📷 Favorite Photo</div>
+        <div class="memory-card">🌅 Beautiful Memory</div>
+        <div class="memory-card">🤍 Forever</div>
+        <div class="memory-card">✨ Final Chapter</div>
+
+    </div>
+
+</div>
+
+<!-- ==========================
+     MEMORY POPUP
+========================== -->
+
+<div id="memoryPopup" class="memory-popup hidden">
+
+    <div class="popup-content">
+
+        <span class="close-popup" onclick="closeMemory()">
+            ✕
+        </span>
+
+
+        <img id="popupImage"
+             src=""
+             alt="Memory">
+
+
+        <div class="popup-text">
+
+            <h3 id="popupTitle"></h3>
+
+            <p id="popupLetter"></p>
+
+        </div>
+
+
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+
+</html>
