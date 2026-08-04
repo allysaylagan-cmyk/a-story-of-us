@@ -494,4 +494,65 @@ button:hover{
 
     color:#d6b36a;
 
+}/* ===========================
+   MOBILE MEMORY POPUP
+=========================== */
+
+@media(max-width:768px){
+
+    .popup-content{
+
+        width:90%;
+
+        flex-direction:column;
+
+        padding:25px;
+
+        max-height:90vh;
+
+        overflow-y:auto;
+
+    }
+
+
+    .popup-content img{
+
+        width:100%;
+
+        max-height:350px;
+
+    }
+
+
+    .popup-text{
+
+        text-align:center;
+
+    }
+
+
+    .popup-text h3{
+
+        font-size:28px;
+
+    }
+
+
+    .popup-text p{
+
+        font-size:16px;
+
+        line-height:1.7;
+
+    }
+
+
+    .close-popup{
+
+        top:10px;
+
+        right:15px;
+
+    }
+
 }
