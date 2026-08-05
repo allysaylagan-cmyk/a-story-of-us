@@ -1,42 +1,54 @@
-function beginStory(){
+// ===============================
+// BEGIN STORY
+// ===============================
+
+function beginStory() {
 
     const intro = document.querySelector(".intro");
+    const episodes = document.querySelector(".episodes");
 
     intro.classList.add("fade-out");
 
     setTimeout(() => {
 
         intro.classList.add("hidden");
-
         intro.classList.remove("fade-out");
 
-        const episodes = document.querySelector(".episodes");
-
         episodes.classList.remove("hidden");
-
         episodes.classList.add("fade-in");
 
         setTimeout(() => {
             episodes.classList.remove("fade-in");
-        },500);
+        }, 500);
 
-    },500);
+    }, 500);
 
 }
 
-function openEpisode(number){
 
-    document.querySelector(".episodes").classList.add("fade-out");
+// ===============================
+// OPEN EPISODE
+// ===============================
+
+function openEpisode(number) {
+
+    const episodes = document.querySelector(".episodes");
+
+    episodes.classList.add("fade-out");
 
     setTimeout(() => {
 
-        document.querySelector(".episodes").classList.add("hidden");
-        document.querySelector(".episodes").classList.remove("fade-out");
+        episodes.classList.add("hidden");
+        episodes.classList.remove("fade-out");
 
+        // Hide ALL episode pages first
         document.querySelectorAll(".episode-page").forEach(page => {
             page.classList.add("hidden");
+            page.classList.remove("fade-in");
+            page.classList.remove("fade-out");
         });
 
+        // Show selected episode
         const selected = document.getElementById("episode" + number);
 
         selected.classList.remove("hidden");
@@ -44,54 +56,54 @@ function openEpisode(number){
 
         setTimeout(() => {
             selected.classList.remove("fade-in");
-        },800);
+        }, 500);
 
-    },800);
+    }, 500);
 
 }
 
-function backToEpisodes(){
 
-    const episode = document.getElementById("episode1");
+// ===============================
+// BACK TO EPISODES
+// ===============================
 
-    episode.classList.add("fade-out");
+function backToEpisodes() {
+
+    // Hide every episode page
+    document.querySelectorAll(".episode-page").forEach(page => {
+        page.classList.add("hidden");
+        page.classList.remove("fade-in");
+        page.classList.remove("fade-out");
+    });
+
+    // Show episode selection
+    const episodes = document.querySelector(".episodes");
+
+    episodes.classList.remove("hidden");
+    episodes.classList.add("fade-in");
 
     setTimeout(() => {
+        episodes.classList.remove("fade-in");
+    }, 500);
 
-        episode.classList.add("hidden");
+}
 
-        episode.classList.remove("fade-out");
 
-        const episodes = document.querySelector(".episodes");
-
-        episodes.classList.remove("hidden");
-
-        episodes.classList.add("fade-in");
-
-        setTimeout(() => {
-            episodes.classList.remove("fade-in");
-        },500);
-
-    },500);
-
-}// ===============================
+// ===============================
 // MEMORY POPUP
 // ===============================
 
-function openMemory(title, image, letter){
+function openMemory(title, image, letter) {
 
     document.getElementById("popupTitle").innerHTML = title;
-
     document.getElementById("popupImage").src = image;
-
     document.getElementById("popupLetter").innerHTML = letter;
 
-    const popup = document.getElementById("memoryPopup");
-    popup.style.display = "flex";
+    document.getElementById("memoryPopup").style.display = "flex";
 
 }
 
-function closeMemory(){
+function closeMemory() {
 
     document.getElementById("memoryPopup").style.display = "none";
 
