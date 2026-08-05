@@ -8,9 +8,35 @@
     box-sizing:border-box;
 }
 
+body::before{
+
+    content:"";
+
+    position:fixed;
+
+    inset:0;
+
+    background-image:
+        radial-gradient(rgba(255,255,255,.03) 1px, transparent 1px);
+
+    background-size:4px 4px;
+
+    pointer-events:none;
+
+    opacity:.25;
+
+    z-index:-1;
+
+}
+
 body{
     min-height:100vh;
-    background:radial-gradient(circle at center,#3b2430 0%,#160d12 45%,#080808 100%);
+
+    background:
+    radial-gradient(circle at top,#7a5264 0%,transparent 35%),
+    radial-gradient(circle at bottom right,#4a3140 0%,transparent 30%),
+    linear-gradient(180deg,#5d4050 0%,#35202b 55%,#181214 100%);
+
     color:#fff;
     font-family:Georgia,serif;
     overflow-x:hidden;
@@ -108,9 +134,9 @@ button:hover{
 
 .episode-card{
 
-    height:380px;
+    height:390px;
 
-    border-radius:20px;
+    border-radius:24px;
 
     overflow:hidden;
 
@@ -124,15 +150,26 @@ button:hover{
 
     cursor:pointer;
 
-    transition:.35s;
+    transition:.35s ease;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.4);
+    border:1.5px solid rgba(255,255,255,.18);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.35),
+        0 0 20px rgba(255,255,255,.05);
 
 }
 
 .episode-card:hover{
 
-    transform:translateY(-8px) scale(1.03);
+    transform:translateY(-10px) scale(1.03);
+
+    border-color:rgba(255,255,255,.45);
+
+    box-shadow:
+        0 22px 55px rgba(0,0,0,.45),
+        0 0 25px rgba(255,255,255,.15),
+        0 0 40px rgba(214,179,106,.18);
 
 }
 
@@ -148,13 +185,13 @@ button:hover{
 
     justify-content:flex-end;
 
-    padding:25px;
+    padding:28px;
 
     background:linear-gradient(
         to top,
-        rgba(0,0,0,.9) 0%,
+        rgba(0,0,0,.92) 0%,
         rgba(0,0,0,.45) 45%,
-        rgba(0,0,0,0) 75%
+        rgba(0,0,0,.08) 100%
     );
 
 }
@@ -263,11 +300,11 @@ button:hover{
 
 .episode-page h2{
 
-    font-size:42px;
+    font-size:48px;
 
-    color:#d6b36a;
+    letter-spacing:2px;
 
-    margin-bottom:25px;
+    text-shadow:0 0 20px rgba(214,179,106,.25);
 
 }
 
@@ -305,9 +342,13 @@ button:hover{
 
     height:170px;
 
-    border-radius:18px;
+    border-radius:20px;
 
-    background:#2a1821;
+    background:rgba(255,255,255,.07);
+
+    backdrop-filter:blur(12px);
+
+    border:1px solid rgba(255,255,255,.12);
 
     display:flex;
 
@@ -321,7 +362,7 @@ button:hover{
 
     transition:.3s;
 
-    border:1px solid rgba(214,179,106,.3);
+    box-shadow:0 10px 25px rgba(0,0,0,.18);
 
 }
 
@@ -329,9 +370,13 @@ button:hover{
 
     transform:translateY(-8px);
 
-    background:#3a2230;
+    background:rgba(255,255,255,.12);
 
-}/* Smooth Fade */
+    border-color:rgba(214,179,106,.45);
+
+}
+
+/* Smooth Fade */
 
 .fade-out{
     animation:fadeOut .5s forwards;
@@ -405,9 +450,7 @@ button:hover{
     max-width:950px;
 
     display:flex;
-
     gap:40px;
-
     align-items:center;
 
     padding:40px;
@@ -415,11 +458,16 @@ button:hover{
     background:
     linear-gradient(
         135deg,
-        #2b1a22,
-        #160d12
+        #5b3d4b,
+        #302027
     );
 
-    border-radius:25px;
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.45);
+
+    border-radius:28px;
 
     position:relative;
 
@@ -605,6 +653,276 @@ button:hover{
 
         padding:0 10px;
 
+    }
+
+}
+
+/* ===========================
+   FINAL QUESTION
+=========================== */
+
+.final-popup{
+
+    position:fixed;
+    inset:0;
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.75);
+
+    backdrop-filter:blur(8px);
+
+    z-index:9999;
+
+    padding:20px;
+
+}
+
+.final-box{
+
+    width:90%;
+    max-width:650px;
+
+    max-height:90vh;
+
+    overflow-y:auto;
+
+    background:linear-gradient(
+        135deg,
+        #5b3d4b,
+        #2f2027
+);
+
+    padding:45px;
+
+    border-radius:30px;
+
+    text-align:center;
+
+    border:2px solid rgba(214,179,106,.5);
+
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+
+}
+
+.final-box h2{
+
+    color:#d6b36a;
+    margin-bottom:25px;
+    font-size:36px;
+
+}
+
+.final-box p{
+
+    color:#eee;
+    line-height:2;
+    font-size:19px;
+
+}
+
+.final-box strong{
+
+    color:#fff;
+    font-size:24px;
+
+}
+
+.yes-btn{
+
+    margin-top:35px;
+    padding:18px 55px;
+
+    border:none;
+    border-radius:50px;
+
+    background:#d6b36a;
+    color:#111;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+}@media(max-width:768px){
+
+    .final-popup{
+
+        align-items:flex-start;
+
+        overflow-y:auto;
+
+        padding:30px 15px;
+
+    }
+
+    .final-box{
+
+        width:100%;
+
+        max-height:none;
+
+        margin:auto;
+
+        padding:30px 20px;
+
+    }
+
+    .final-box h2{
+
+        font-size:28px;
+
+    }
+
+    .final-box p{
+
+        font-size:17px;
+
+        line-height:1.8;
+
+    }
+
+    .final-box strong{
+
+        font-size:21px;
+
+    }
+
+    .yes-btn{
+
+        width:100%;
+
+        font-size:20px;
+
+    }
+
+}.floating-heart{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    z-index:99999;
+
+    pointer-events:none;
+
+    animation:floatHeart linear forwards;
+
+}
+
+@keyframes floatHeart{
+
+    from{
+
+        transform:translateY(0) rotate(0deg);
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120vh) rotate(360deg);
+
+        opacity:0;
+
+    }
+
+}.no-btn{
+
+    background:#555;
+
+    color:white;
+
+    margin-left:15px;
+
+    transition:.25s;
+
+}#proposalSection{
+
+    display:none;
+
+    text-align:center;
+
+    margin:30px 0;
+
+}
+
+#proposalSection p{
+
+    color:#d6b36a;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+}#musicBtn{
+
+    position:fixed;
+
+    top:20px;
+
+    right:20px;
+
+    width:55px;
+
+    height:55px;
+
+    border-radius:50%;
+
+    background:#d6b36a;
+
+    color:#111;
+
+    border:none;
+
+    font-size:24px;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    margin:0;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+
+}
+
+#musicBtn:hover{
+
+    transform:scale(1.1);
+
+}.memory-card,
+.episode-card,
+button{
+
+    transition:
+    transform .35s ease,
+    box-shadow .35s ease,
+    background .35s ease;
+
+}.intro h1{
+
+    animation:glow 4s ease-in-out infinite;
+
+}
+
+@keyframes glow{
+
+    0%{
+        text-shadow:0 0 8px rgba(255,255,255,.15);
+    }
+
+    50%{
+        text-shadow:
+        0 0 20px rgba(255,255,255,.18),
+        0 0 40px rgba(214,179,106,.18);
+    }
+
+    100%{
+        text-shadow:0 0 8px rgba(255,255,255,.15);
     }
 
 }
